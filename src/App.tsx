@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'App.css';
+import BottomNav from 'components/BottomNav/BottomNav';
+import Detail from 'pages/Detail/Detail';
+import List from 'pages/List/List';
+import Login from 'pages/Login/Login';
+import { useRouterSelector } from 'store/slices/routerSlice';
 
 function App() {
+  const { currentPage } = useRouterSelector();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="transition-wrapper">
+        {currentPage === 1 && <Login />}
+        {currentPage === 2 && <List />}
+        {currentPage === 3 && <Detail />}
+        {currentPage !== 1 && <BottomNav />}
+      </div>
     </div>
   );
 }

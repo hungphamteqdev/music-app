@@ -1,0 +1,25 @@
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 89px;
+  width: 100%;
+  border-top: 1px solid #fff;
+  background: radial-gradient(
+    70.33% 1341.4% at 29.67% 35.71%,
+    rgba(255, 255, 255, 0.35) 0%,
+    #d6d6fe 100%
+  );
+  ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    li button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

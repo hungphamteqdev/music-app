@@ -1,0 +1,29 @@
+.progress-bar {
+  cursor: pointer;
+  height: 6px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  > div:first-child {
+    content: '';
+    position: absolute;
+    height: 6px;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: #6c7be8;
+  }
+  > div:last-child {
+    content: '';
+    cursor: grab;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: calc(50% - 7.5px);
+    border-radius: 50%;
+    background: #6c7be8;
+    box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.27),
+      inset 3px 3px 6px rgba(0, 31, 255, 0.42);
+  }
+}

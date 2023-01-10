@@ -1,0 +1,29 @@
+.detail {
+  height: 100%;
+  width: 100%;
+  padding: 0 38px;
+  background-color: #d6d9fe;
+  &__header {
+    padding: 83px 0 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    > button {
+      cursor: pointer;
+    }
+    > p {
+      font-weight: 700;
+      font-size: 18px;
+      color: #2c4271;
+    }
+    > button {
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background: #d5dbfe;
+      box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.52),
+        inset 3px 3px 6px rgba(122, 145, 255, 0.18);
+    }
+  }
+}
